@@ -104,6 +104,7 @@ class WaypointUpdater(object):
         #
         self.MAX_SPEED = None
         self.pose = None
+        self.twist = None
         self.lane_header = None
         self.base_waypoints = None
         self.waypoints_2d = None 
@@ -194,7 +195,7 @@ class WaypointUpdater(object):
         num_pts = len(self.output_waypoints)
         if num_pts < LOOKAHEAD_WPS:
             num_remaining = LOOKAHEAD_WPS - num_pts
-            self.output_waypoints = self.output_waypoints + deepcopy(self.base_waypoints[0:nnum_remaining])
+            self.output_waypoints = self.output_waypoints + deepcopy(self.base_waypoints[0:num_remaining])
 
         #
         # Now get traffic light info and handle waypoint velocity
