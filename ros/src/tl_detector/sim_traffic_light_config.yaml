@@ -11,3 +11,6 @@ stop_line_positions:
     - [161.76, 2303.82]
     - [351.84, 1574.65]
 is_site: False
+use_ground_truth: False
+light_classifier:
+    rate: 2
